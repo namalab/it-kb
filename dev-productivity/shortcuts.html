@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/it-kb/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/it-kb/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/it-kb/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/it-kb/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/it-kb/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"namalab.github.io","root":"/it-kb/","images":"/it-kb/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"検索…","empty":"検索結果が見つかりませんでした: ${query}","hits_time":"${hits} の結果が ${time} ms で見つかりました","hits":"${hits} 件の結果が見つかりました"}}</script><script src="/it-kb/js/config.js"></script>
+
+    <meta name="description" content="開発者が知っておくべきショートカット集はじめにIT・特にシステム開発に携わる開発者向けに、知っておくべきショートカットをまとめておきました。細かいものまで網羅して覚えきれないような物量にするのではなく、「最低限これだけは知っておくと生産性向上に寄与できます」というレベル感で書いています。生産性向上の一助になれば幸いです。 対象者 システム開発に携わる開発者  得られる知識・ゴール 最低限知っておく">
+<meta property="og:type" content="website">
+<meta property="og:title" content="開発生産性">
+<meta property="og:url" content="https://namalab.github.io/it-kb/dev-productivity/shortcuts.html">
+<meta property="og:site_name" content="開発ナレッジベース">
+<meta property="og:description" content="開発者が知っておくべきショートカット集はじめにIT・特にシステム開発に携わる開発者向けに、知っておくべきショートカットをまとめておきました。細かいものまで網羅して覚えきれないような物量にするのではなく、「最低限これだけは知っておくと生産性向上に寄与できます」というレベル感で書いています。生産性向上の一助になれば幸いです。 対象者 システム開発に携わる開発者  得られる知識・ゴール 最低限知っておく">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2022-03-22T07:27:45.000Z">
+<meta property="article:modified_time" content="2022-03-22T08:28:26.034Z">
+<meta property="article:author" content="namalab">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://namalab.github.io/it-kb/dev-productivity/shortcuts">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"ja","comments":true,"permalink":"https://namalab.github.io/it-kb/dev-productivity/shortcuts.html","path":"dev-productivity/shortcuts.html","title":"開発生産性"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>開発生産性 | 開発ナレッジベース
+</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/it-kb/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="ナビゲーションバーの切り替え" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/it-kb/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">開発ナレッジベース</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">あるエンジニアのまとめノート</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-tags"><a href="/it-kb/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>タグ</a></li><li class="menu-item menu-item-categories"><a href="/it-kb/categories/" rel="section"><i class="fa fa-th fa-fw"></i>カテゴリ</a></li><li class="menu-item menu-item-archives"><a href="/it-kb/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>アーカイブ</a></li><li class="menu-item menu-item-sitemap"><a href="/it-kb/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>サイトマップ</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          見出し
+        </li>
+        <li class="sidebar-nav-overview">
+          概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%96%8B%E7%99%BA%E8%80%85%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8F%E3%81%B9%E3%81%8D%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E9%9B%86"><span class="nav-number">1.</span> <span class="nav-text">開発者が知っておくべきショートカット集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB"><span class="nav-number">1.1.</span> <span class="nav-text">はじめに</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BE%E8%B1%A1%E8%80%85"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">対象者</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%97%E3%82%89%E3%82%8C%E3%82%8B%E7%9F%A5%E8%AD%98%E3%83%BB%E3%82%B4%E3%83%BC%E3%83%AB"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">得られる知識・ゴール</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%EF%BC%88Windows-%E5%9F%BA%E7%A4%8E%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">ショートカット（Windows 基礎）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%EF%BC%88Windows-%E3%83%97%E3%83%A9%E3%82%B9%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">ショートカット（Windows プラスアルファ）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%EF%BC%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">ショートカット（アプリケーション）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E6%8A%80-Tips"><span class="nav-number">1.5.</span> <span class="nav-text">小技 Tips</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">namalab</p>
+  <div class="site-description" itemprop="description">ITナレッジベース 開発生産性</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/it-kb/archives/">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">ポスト</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="ja"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">開発生産性
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h1 id="開発者が知っておくべきショートカット集"><a href="#開発者が知っておくべきショートカット集" class="headerlink" title="開発者が知っておくべきショートカット集"></a>開発者が知っておくべきショートカット集</h1><h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>IT・特にシステム開発に携わる開発者向けに、知っておくべきショートカットをまとめておきました。<br>細かいものまで網羅して覚えきれないような物量にするのではなく、「最低限これだけは知っておくと生産性向上に寄与できます」というレベル感で書いています。<br>生産性向上の一助になれば幸いです。</p>
+<h4 id="対象者"><a href="#対象者" class="headerlink" title="対象者"></a>対象者</h4><ul>
+<li>システム開発に携わる開発者</li>
+</ul>
+<h4 id="得られる知識・ゴール"><a href="#得られる知識・ゴール" class="headerlink" title="得られる知識・ゴール"></a>得られる知識・ゴール</h4><ul>
+<li>最低限知っておくべき便利なショートカットを覚えることができる</li>
+<li>結果として作業の生産性アップが期待できる</li>
+</ul>
+<h2 id="ショートカット（Windows-基礎）"><a href="#ショートカット（Windows-基礎）" class="headerlink" title="ショートカット（Windows 基礎）"></a>ショートカット（Windows 基礎）</h2><p>ごくごく基本的なもの。知っている方も多いのではないでしょうか。</p>
+<table>
+<thead>
+<tr>
+<th>分類</th>
+<th>ショートカット</th>
+<th>概要・備考</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>汎用</td>
+<td>Ctrl+C</td>
+<td>コピー</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+X</td>
+<td>切り取り</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+V</td>
+<td>貼りつけ</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+A</td>
+<td>全選択</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+Z</td>
+<td>アンドゥ</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Shift+Ctrl+Z または Ctrl+Y</td>
+<td>リドゥ</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+B</td>
+<td>Bold（太字）</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+I</td>
+<td>Italic（斜字）</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+U</td>
+<td>Underline（下線）</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+N</td>
+<td>新規作成</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+S</td>
+<td>保存</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+P</td>
+<td>印刷</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+F</td>
+<td>検索</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>Ctrl+R</td>
+<td>置換</td>
+</tr>
+<tr>
+<td>汎用</td>
+<td>F11</td>
+<td>全画面表示</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+E</td>
+<td>エクスプローラーを表示</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>PrintScreen</td>
+<td>画面キャプチャ（画面全体をコピー）</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Alt+PrintScreen</td>
+<td>画面キャプチャ（ウィンドウをコピー）</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+L</td>
+<td>画面をロック</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+D</td>
+<td>デスクトップを表示</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+M</td>
+<td>全ウィンドウを最小化</td>
+</tr>
+</tbody></table>
+<h2 id="ショートカット（Windows-プラスアルファ）"><a href="#ショートカット（Windows-プラスアルファ）" class="headerlink" title="ショートカット（Windows プラスアルファ）"></a>ショートカット（Windows プラスアルファ）</h2><p>知っておくとかなり便利！ プラスアルファのショートカット集。</p>
+<table>
+<thead>
+<tr>
+<th>分類</th>
+<th>ショートカット</th>
+<th>概要・備考</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows</td>
+<td>Win+V</td>
+<td>クリップボードから履歴貼りつけ</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Shift+Win+S</td>
+<td>画面キャプチャ（画面の一部をコピー）</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+R</td>
+<td>「ファイル名を指定して実行」を開く</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+S</td>
+<td>「ここに入力して検索」を開く</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+X</td>
+<td>スタートボタンの右クリックメニューを開く</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+ALT+R</td>
+<td>画面の動画キャプチャ（画面全体を動画として録画）<br/>録画したものはWin＋Gで表示されるXboxゲームバー内で確認できる</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Win+W</td>
+<td>Whiteboard等ペンツールを開く</td>
+</tr>
+</tbody></table>
+<h2 id="ショートカット（アプリケーション）"><a href="#ショートカット（アプリケーション）" class="headerlink" title="ショートカット（アプリケーション）"></a>ショートカット（アプリケーション）</h2><p>アプリケーション固有のもので代表的なもの。</p>
+<table>
+<thead>
+<tr>
+<th>分類</th>
+<th>ショートカット</th>
+<th>概要・備考</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ブラウザ</td>
+<td>F12</td>
+<td>開発者ツールの表示</td>
+</tr>
+<tr>
+<td>VSCode</td>
+<td>Ctrl+@</td>
+<td>ターミナルを開く</td>
+</tr>
+<tr>
+<td>Excel</td>
+<td>Ctrl+;</td>
+<td>現在日付を入力</td>
+</tr>
+<tr>
+<td>Excel</td>
+<td>Ctrl+:</td>
+<td>現在時刻を入力</td>
+</tr>
+</tbody></table>
+<h2 id="小技-Tips"><a href="#小技-Tips" class="headerlink" title="小技 Tips"></a>小技 Tips</h2><p>以下はショートカットではないですが、WindowsでのTipsと言える小技です。参考になれば幸いです。</p>
+<ul>
+<li>Explorer のアドレスバーに「cmd」と入力してエンターキー<br>→該当フォルでコマンドプロンプトを表示</li>
+<li>Explorer でフォルダを選択してShift＋右クリック→「PowerShellウィンドウをここで開く」<br>→該当フォルダでPowerShellを表示</li>
+<li>Explorer でフォルダを選択してShift＋右クリック→「Linuxシェルをここに開く」<br>→該当フォルダでWSLシェルを表示</li>
+<li>Explorer でフォルダやファイルを選択してShift＋右クリック→「パスのコピー」<br>→フルパスをコピー（複数ファイルを一括でコピーも可）</li>
+<li>「ファイル名を指定して実行」で「.」のみ入力してエンターキー<br>→ユーザーディレクトリを開く。「.ssh」と入力してエンターならユーザーディレクトリ\.sshを開く</li>
+<li>「ファイル名を指定して実行」で「%appdata%」<br>→AppData¥Roamingディレクトリを開く</li>
+<li>「ファイル名を指定して実行」で「%AppData%\Microsoft\Windows\SendTo」<br>→SendToディレクトリを開く（ここにショートカットを作成することで、右クリックメニュー→「送る」に登録される）</li>
+<li>コマンドプロンプトやバッチファイルにて wsl コマンドも利用可能<ul>
+<li>例：wsl grep any *.txt → フォルダ内のテキストファイルから GREP</li>
+<li>例：dir &#x2F;s | wsl grep DIR のように、DOS コマンドと組み合わせることも可能</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+      
+      
+      
+    </div>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">namalab</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/it-kb/js/comments.js"></script><script src="/it-kb/js/utils.js"></script><script src="/it-kb/js/motion.js"></script><script src="/it-kb/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
