@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/it-kb/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/it-kb/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/it-kb/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/it-kb/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/it-kb/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"namalab.github.io","root":"/it-kb/","images":"/it-kb/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"検索…","empty":"検索結果が見つかりませんでした: ${query}","hits_time":"${hits} の結果が ${time} ms で見つかりました","hits":"${hits} 件の結果が見つかりました"}}</script><script src="/it-kb/js/config.js"></script>
+
+    <meta name="description" content="開発者が知っておくべきツールの使い分けと活用はじめにIT・特にシステム開発に携わる開発者向けに、ツールの使い分けに関するヒントをまとめておきました。生産性向上の一助になれば幸いです。 対象者 システム開発に携わる開発者  得られる知識・ゴール ツールの使い分けに関して一定の考え方が身につく 結果として作業の生産性アップが期待できる  使用ツールの工夫各種ツールの特徴を知り、うまく使い分けることで生">
+<meta property="og:type" content="website">
+<meta property="og:title" content="開発生産性">
+<meta property="og:url" content="https://namalab.github.io/it-kb/dev-productivity/tool.html">
+<meta property="og:site_name" content="開発ナレッジベース">
+<meta property="og:description" content="開発者が知っておくべきツールの使い分けと活用はじめにIT・特にシステム開発に携わる開発者向けに、ツールの使い分けに関するヒントをまとめておきました。生産性向上の一助になれば幸いです。 対象者 システム開発に携わる開発者  得られる知識・ゴール ツールの使い分けに関して一定の考え方が身につく 結果として作業の生産性アップが期待できる  使用ツールの工夫各種ツールの特徴を知り、うまく使い分けることで生">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2022-04-06T07:37:45.000Z">
+<meta property="article:modified_time" content="2022-04-06T08:34:45.862Z">
+<meta property="article:author" content="namalab">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://namalab.github.io/it-kb/dev-productivity/tool">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"ja","comments":true,"permalink":"https://namalab.github.io/it-kb/dev-productivity/tool.html","path":"dev-productivity/tool.html","title":"開発生産性"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>開発生産性 | 開発ナレッジベース
+</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/it-kb/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="ナビゲーションバーの切り替え" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/it-kb/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">開発ナレッジベース</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">あるエンジニアのまとめノート</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-tags"><a href="/it-kb/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>タグ</a></li><li class="menu-item menu-item-categories"><a href="/it-kb/categories/" rel="section"><i class="fa fa-th fa-fw"></i>カテゴリ</a></li><li class="menu-item menu-item-archives"><a href="/it-kb/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>アーカイブ</a></li><li class="menu-item menu-item-sitemap"><a href="/it-kb/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>サイトマップ</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          見出し
+        </li>
+        <li class="sidebar-nav-overview">
+          概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%96%8B%E7%99%BA%E8%80%85%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8F%E3%81%B9%E3%81%8D%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%81%A8%E6%B4%BB%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">開発者が知っておくべきツールの使い分けと活用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB"><span class="nav-number">1.1.</span> <span class="nav-text">はじめに</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BE%E8%B1%A1%E8%80%85"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">対象者</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%97%E3%82%89%E3%82%8C%E3%82%8B%E7%9F%A5%E8%AD%98%E3%83%BB%E3%82%B4%E3%83%BC%E3%83%AB"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">得られる知識・ゴール</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E5%B7%A5%E5%A4%AB"><span class="nav-number">1.2.</span> <span class="nav-text">使用ツールの工夫</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E8%A3%BD%E5%93%81"><span class="nav-number">1.2.1.</span> <span class="nav-text">オフィス製品</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E8%A3%BD%E5%93%81%EF%BC%88Word%EF%BC%89"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">オフィス製品（Word）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88"><span class="nav-number">1.2.1.1.1.</span> <span class="nav-text">メリット</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E3%83%87%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88"><span class="nav-number">1.2.1.1.2.</span> <span class="nav-text">デメリット</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%91%E3%81%8D%E4%B8%8D%E5%90%91%E3%81%8D"><span class="nav-number">1.2.1.1.3.</span> <span class="nav-text">向き不向き</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E8%A3%BD%E5%93%81%EF%BC%88Excel%EF%BC%89"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">オフィス製品（Excel）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88-1"><span class="nav-number">1.2.1.2.1.</span> <span class="nav-text">メリット</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E3%83%87%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88-1"><span class="nav-number">1.2.1.2.2.</span> <span class="nav-text">デメリット</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%91%E3%81%8D%E4%B8%8D%E5%90%91%E3%81%8D-1"><span class="nav-number">1.2.1.2.3.</span> <span class="nav-text">向き不向き</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E8%A3%BD%E5%93%81%EF%BC%88PowerPoint%EF%BC%89"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">オフィス製品（PowerPoint）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88-2"><span class="nav-number">1.2.1.3.1.</span> <span class="nav-text">メリット</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E3%83%87%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88-2"><span class="nav-number">1.2.1.3.2.</span> <span class="nav-text">デメリット</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%91%E3%81%8D%E4%B8%8D%E5%90%91%E3%81%8D-2"><span class="nav-number">1.2.1.3.3.</span> <span class="nav-text">向き不向き</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%82%E7%94%A8%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E6%B4%BB%E7%94%A8"><span class="nav-number">1.2.2.</span> <span class="nav-text">専用ツールの活用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ER%E5%9B%B3"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">ER図</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%82%AF%E3%83%A9%E3%82%B9%E5%9B%B3"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">クラス図</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%82%AC%E3%83%B3%E3%83%88%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">ガントチャート</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%8E%E7%94%A8%E3%81%A0%E3%81%91%E3%81%A9%E4%BE%BF%E5%88%A9%E3%81%AA-Draw-io"><span class="nav-number">1.2.3.</span> <span class="nav-text">汎用だけど便利な Draw.io</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%8E%E7%94%A8%E3%81%A0%E3%81%91%E3%81%A9%E4%BE%BF%E5%88%A9%E3%81%AA-VisualStudio-Code"><span class="nav-number">1.2.4.</span> <span class="nav-text">汎用だけど便利な VisualStudio Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%81%AE%E6%B4%BB%E7%94%A8"><span class="nav-number">1.2.5.</span> <span class="nav-text">マークダウンの活用</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">namalab</p>
+  <div class="site-description" itemprop="description">ITナレッジベース 開発生産性</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/it-kb/archives/">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">ポスト</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="ja"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">開発生産性
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h1 id="開発者が知っておくべきツールの使い分けと活用"><a href="#開発者が知っておくべきツールの使い分けと活用" class="headerlink" title="開発者が知っておくべきツールの使い分けと活用"></a>開発者が知っておくべきツールの使い分けと活用</h1><h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>IT・特にシステム開発に携わる開発者向けに、ツールの使い分けに関するヒントをまとめておきました。<br>生産性向上の一助になれば幸いです。</p>
+<h4 id="対象者"><a href="#対象者" class="headerlink" title="対象者"></a>対象者</h4><ul>
+<li>システム開発に携わる開発者</li>
+</ul>
+<h4 id="得られる知識・ゴール"><a href="#得られる知識・ゴール" class="headerlink" title="得られる知識・ゴール"></a>得られる知識・ゴール</h4><ul>
+<li>ツールの使い分けに関して一定の考え方が身につく</li>
+<li>結果として作業の生産性アップが期待できる</li>
+</ul>
+<h2 id="使用ツールの工夫"><a href="#使用ツールの工夫" class="headerlink" title="使用ツールの工夫"></a>使用ツールの工夫</h2><p>各種ツールの特徴を知り、うまく使い分けることで生産性向上に繋げることができます。<br>会社やお客様にツールを指定されてしまうこともありますが、自分で選択できる場合・提案できる場合には、是非下記の内容を参考に選択してください。</p>
+<h3 id="オフィス製品"><a href="#オフィス製品" class="headerlink" title="オフィス製品"></a>オフィス製品</h3><p>ツール類の選択肢も多様化してきましたが、今でもマイクロソフトオフィス製品を活用する現場は多くあります。</p>
+<p>資料作成に使える主な選択肢としては Word、Excel、PowerPoint がありますが、割と多くの現場において「Excel しか使わない」とか「PowerPoint しか使わない」といった文化があります。<br>それぞれ特徴は全く異なりますので、それぞれの特性を踏まえて適宜選択することで、生産性向上に繋げることが可能です。</p>
+<h4 id="オフィス製品（Word）"><a href="#オフィス製品（Word）" class="headerlink" title="オフィス製品（Word）"></a>オフィス製品（Word）</h4><h5 id="メリット"><a href="#メリット" class="headerlink" title="メリット"></a>メリット</h5><ul>
+<li>見出しに章番号（1-1、1-2、…）を割り当てることができて非常に便利</li>
+</ul>
+<h5 id="デメリット"><a href="#デメリット" class="headerlink" title="デメリット"></a>デメリット</h5><ul>
+<li>用紙サイズ以上の大きな図や表を書くことができない</li>
+</ul>
+<h5 id="向き不向き"><a href="#向き不向き" class="headerlink" title="向き不向き"></a>向き不向き</h5><ul>
+<li>章番号を付けるような長い文書では最適<ul>
+<li>マニュアル、手順書など</li>
+</ul>
+</li>
+<li>何ページにも及ぶ印刷文書にも最適</li>
+<li>大きな図や表を埋め込むのには向かない<br>→これらが必要な場合は Excel で作成のうえ「別紙」として添付した方が良い</li>
+</ul>
+<h4 id="オフィス製品（Excel）"><a href="#オフィス製品（Excel）" class="headerlink" title="オフィス製品（Excel）"></a>オフィス製品（Excel）</h4><h5 id="メリット-1"><a href="#メリット-1" class="headerlink" title="メリット"></a>メリット</h5><ul>
+<li>表を書くだけでなく、文書や作図にも使える汎用性</li>
+<li>大きな図や表を書いても「ページに収まるよう印刷」することも可</li>
+</ul>
+<h5 id="デメリット-1"><a href="#デメリット-1" class="headerlink" title="デメリット"></a>デメリット</h5><ul>
+<li>章番号は手動で書く必要があり、多くの現場・多くの資料で更新漏れ等が散見される</li>
+<li>印刷ズレ</li>
+</ul>
+<h5 id="向き不向き-1"><a href="#向き不向き-1" class="headerlink" title="向き不向き"></a>向き不向き</h5><ul>
+<li>1ファイルに複数シート＋Excel方眼の構成により、汎用的な資料作成ツールとして優秀<br>（ここでは、Excel方眼の是非については触れません）</li>
+<li>ただし印刷ズレが酷いため、印刷前提なら使うべきではない<ul>
+<li>印刷の改ページを意識してページの枠線を入れているようなフォーマットをたまに見かけるが、生産性の面では最低</li>
+</ul>
+</li>
+<li>章番号のようなものも手動でメンテするのは生産性の面で無駄</li>
+<li>セル結合は生産性低下の元凶。行列の切り取りや選択もやりにくくなるため絶対禁止<ul>
+<li>Excelのバージョンによって、結合セルを含んだ計算結果が異なることもある<br><a target="_blank" rel="noopener" href="https://www.itmedia.co.jp/news/articles/2201/21/news144.html">https://www.itmedia.co.jp/news/articles/2201/21/news144.html</a></li>
+<li>見た目上でセンタリングしたいだけならセルの書式設定＞配置＞横位置を「選択範囲内で中央」にすれば良い</li>
+<li>Excel方眼に列サイズの異なる表を埋め込みたいなら、別シートに表を書いて「リンクされた図」で貼りつければ良い</li>
+</ul>
+</li>
+</ul>
+<h4 id="オフィス製品（PowerPoint）"><a href="#オフィス製品（PowerPoint）" class="headerlink" title="オフィス製品（PowerPoint）"></a>オフィス製品（PowerPoint）</h4><h5 id="メリット-2"><a href="#メリット-2" class="headerlink" title="メリット"></a>メリット</h5><ul>
+<li>見た目を良くするための機能が多数</li>
+<li>特にスマートアート機能ではプレゼンでよく使われるイメージを簡単に挿入可能</li>
+</ul>
+<h5 id="デメリット-2"><a href="#デメリット-2" class="headerlink" title="デメリット"></a>デメリット</h5><ul>
+<li>章番号は手動で書く必要あり</li>
+<li>ページからはみ出した範囲は表示されない</li>
+</ul>
+<h5 id="向き不向き-2"><a href="#向き不向き-2" class="headerlink" title="向き不向き"></a>向き不向き</h5><ul>
+<li>当たり前だが「プレゼン」資料には最適<ul>
+<li>インパクトと説得力を与えることができる</li>
+<li>「この提案を顧客に納得してもらって決断してもらう」といった場合には絶対 PowerPoint</li>
+<li>セミナーや勉強会のように説明に用いる資料でも、1ページずつ見せて説明できるので向いている</li>
+</ul>
+</li>
+<li>ただし、ページからはみ出した範囲は見えなくなるため、長文や細かい情報も含めて正確に伝えたい資料には向かない<ul>
+<li>1ページに収めることや見た目を優先して、本来書くべきことを省略したり表現を変えてしまう人が多い</li>
+<li>要件定義書や設計書、マニュアル類を PowerPoint で書くプロジェクトもあるが、お勧めしない</li>
+</ul>
+</li>
+<li>PowerPoint で資料を書こうとすると、意外と長時間かかることが多いので注意</li>
+</ul>
+<h3 id="専用ツールの活用"><a href="#専用ツールの活用" class="headerlink" title="専用ツールの活用"></a>専用ツールの活用</h3><p>専用ツールを使うことで、作図の手間を軽減したり、各種便利機能が使えるなど、生産性の面で非常に高い効果があります。</p>
+<p>代表的なものを記しますので、参考になさってください。</p>
+<h4 id="ER図"><a href="#ER図" class="headerlink" title="ER図"></a>ER図</h4><ul>
+<li>ERMaster（Eclipseプラグイン）<ul>
+<li>綺麗な図を簡単に描ける</li>
+<li>DB からのリバースや DDL の出力が可能</li>
+<li>Eclipse ベースしかないのが残念だが、使い勝手の良いソフト</li>
+</ul>
+</li>
+<li>A5:SQL Mk-2<ul>
+<li>SQLクライアントツール</li>
+<li>DB からのリバースや DDL の出力が可能</li>
+<li>ER図の機能としては少々癖がある</li>
+</ul>
+</li>
+<li>MySQL WorkBench<ul>
+<li>MySQL 専用だが優れた SQLクライアントツール</li>
+<li>DB からのリバースや DDL の出力が可能</li>
+<li>ER図の機能も優秀</li>
+</ul>
+</li>
+<li>SI ObjectBrowser ER（有償）<ul>
+<li>有償のER図作成ツール</li>
+</ul>
+</li>
+</ul>
+<h4 id="クラス図"><a href="#クラス図" class="headerlink" title="クラス図"></a>クラス図</h4><ul>
+<li>astah* UML（有償）<ul>
+<li>各種UMLを作画するための専用ツール</li>
+<li>ソースコードからクラス図をリバース可能</li>
+</ul>
+</li>
+</ul>
+<h4 id="ガントチャート"><a href="#ガントチャート" class="headerlink" title="ガントチャート"></a>ガントチャート</h4><ul>
+<li>Microsoft Project（有償）<ul>
+<li>定番のプロジェクト管理ツール</li>
+<li>WBS をガントチャートとして管理できるだけでなく、要員やコストの管理も可能</li>
+</ul>
+</li>
+</ul>
+<h3 id="汎用だけど便利な-Draw-io"><a href="#汎用だけど便利な-Draw-io" class="headerlink" title="汎用だけど便利な Draw.io"></a>汎用だけど便利な Draw.io</h3><p>Draw.io という作画ツールがあります。<br>こちらは何らかの図に特化した専用ツールではないものの、作図ツールとしてはかなり使いやすく洗練されており、綺麗な図をパパッと作成できるので時短になります。<br>システム構成図を Excel で頑張って描くよりは、こちらを使って手早く仕上げましょう。</p>
+<ul>
+<li>汎用的な作図ツール</li>
+<li>フローチャートや AWS 構成図等を書くためのアイコンが標準で多数用意されている</li>
+<li>ブラウザ上で作図できるだけでなく、VSCode 拡張機能としてローカルファイルも作成可</li>
+<li>作成した図は、クリップボードにコピーしたり画像ファイルとして出力することができる</li>
+<li>VSCode にて拡張子を「～.drawio.svg」とすれば、そのまま SVG ファイルとして外部から読み込むことが可能（画像ファイルとして Export する手間が不要）</li>
+</ul>
+<h3 id="汎用だけど便利な-VisualStudio-Code"><a href="#汎用だけど便利な-VisualStudio-Code" class="headerlink" title="汎用だけど便利な VisualStudio Code"></a>汎用だけど便利な VisualStudio Code</h3><p>Microsoft の VisualStudio Code というテキストエディタがあります。VSCode と省略されることもあります。<br>テキストエディタと言いつつ、各種拡張機能にも対応し、様々なプログラミング言語のヒント表示やデバッグにも対応する高機能なソフトウェアです。</p>
+<p>前述の Draw.io の拡張機能もあります。</p>
+<h3 id="マークダウンの活用"><a href="#マークダウンの活用" class="headerlink" title="マークダウンの活用"></a>マークダウンの活用</h3><p>こちらはツールではありませんが、「マークダウン」というテキストフォーマットがあります。<br>簡単な記述で HTML のタグのような機能を表現できるものです。<br>メモやちょっとした文書を書くのに向いています。</p>
+<ul>
+<li>テキストエディタで書いて整形</li>
+<li>HTML や Word、PDF に変換できるのは勿論、marp 等のツールを用いてスライドも出力可能</li>
+<li>「中身＞見た目」の資料作りにおいて、まずマークダウンで箇条書き→整理してから清書するとスムーズ</li>
+</ul>
+
+      </div>
+      
+      
+      
+    </div>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">namalab</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/it-kb/js/comments.js"></script><script src="/it-kb/js/utils.js"></script><script src="/it-kb/js/motion.js"></script><script src="/it-kb/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
