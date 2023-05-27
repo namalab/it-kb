@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"namalab.github.io","root":"/it-kb/","images":"/it-kb/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"検索…","empty":"検索結果が見つかりませんでした: ${query}","hits_time":"${hits} の結果が ${time} ms で見つかりました","hits":"${hits} 件の結果が見つかりました"}}</script><script src="/it-kb/js/config.js"></script>
 
-    <meta name="description" content="memo（執筆中）生産性を高める必要性 SES を中心とした業態であれ、受託開発であれ、ITエンジニアにとって「時間＝コスト」 お客様から見て ITエンジニアの生産性は成果物と金額を左右する重要事項 IT企業は多数あるが、今後日本においては労働人口が減少していくことが確定しているため競争が激化する。従来のように低単金で人数を増やす戦略では行き詰まることが明らか。 従来は海外の人材を安く使うという選">
+    <meta name="description" content="memo（執筆中）コスト低減 開発手法の工夫 良いフレームワーク・慣れたフレームワークを使う 最適な開発手法を整備する プロジェクト管理の見直し 標準化、ナレッジ化、機械化、再利用   要員の工夫 ハイスキル人材を活用する 外注、オフショアを活用する 掛け持ち厳禁 チーム内での役割を明確にして、担当外は知識あっても引くところを意識   ツール類の工夫 便利なツールの活用 フリー・低価格ツールの活用">
 <meta property="og:type" content="website">
 <meta property="og:title" content="開発生産性">
 <meta property="og:url" content="https://namalab.github.io/it-kb/dev-productivity/memo.html">
 <meta property="og:site_name" content="開発ナレッジベース">
-<meta property="og:description" content="memo（執筆中）生産性を高める必要性 SES を中心とした業態であれ、受託開発であれ、ITエンジニアにとって「時間＝コスト」 お客様から見て ITエンジニアの生産性は成果物と金額を左右する重要事項 IT企業は多数あるが、今後日本においては労働人口が減少していくことが確定しているため競争が激化する。従来のように低単金で人数を増やす戦略では行き詰まることが明らか。 従来は海外の人材を安く使うという選">
+<meta property="og:description" content="memo（執筆中）コスト低減 開発手法の工夫 良いフレームワーク・慣れたフレームワークを使う 最適な開発手法を整備する プロジェクト管理の見直し 標準化、ナレッジ化、機械化、再利用   要員の工夫 ハイスキル人材を活用する 外注、オフショアを活用する 掛け持ち厳禁 チーム内での役割を明確にして、担当外は知識あっても引くところを意識   ツール類の工夫 便利なツールの活用 フリー・低価格ツールの活用">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2022-03-22T07:27:45.000Z">
-<meta property="article:modified_time" content="2022-03-29T07:44:24.736Z">
+<meta property="article:modified_time" content="2022-04-19T02:38:18.304Z">
 <meta property="article:author" content="namalab">
 <meta name="twitter:card" content="summary">
 
@@ -42,8 +42,15 @@
 <title>開発生産性 | 開発ナレッジベース
 </title>
   
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-20961934-1","only_pageview":true}</script>
-  <script src="/it-kb/js/third-party/analytics/google-analytics.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYW5ZETCVW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FYW5ZETCVW');
+  </script>
 
 
 
@@ -123,7 +130,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#memo%EF%BC%88%E5%9F%B7%E7%AD%86%E4%B8%AD%EF%BC%89"><span class="nav-text">memo（執筆中）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E7%94%A3%E6%80%A7%E3%82%92%E9%AB%98%E3%82%81%E3%82%8B%E5%BF%85%E8%A6%81%E6%80%A7"><span class="nav-text">生産性を高める必要性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC"><span class="nav-text">基本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%A1%E5%80%A4%E3%81%AE%E5%90%91%E4%B8%8A"><span class="nav-text">価値の向上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%82%B3%E3%82%B9%E3%83%88%E4%BD%8E%E6%B8%9B"><span class="nav-text">コスト低減</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%83%8F%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%AB%E4%BA%BA%E6%9D%90"><span class="nav-text">ハイスキル人材</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88"><span class="nav-text">ナレッジマネジメント</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%88%E6%96%87%E6%9B%B8%E5%8C%96%E3%80%81%E8%B3%87%E6%96%99%E3%81%AE%E6%AE%8B%E3%81%97%E6%96%B9%EF%BC%89"><span class="nav-text">ドキュメンテーション（文書化、資料の残し方）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%83%BB%E6%B4%BB%E7%94%A8"><span class="nav-text">ツールの使い分け・活用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%83%BBTips"><span class="nav-text">ショートカット・Tips</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#memo%EF%BC%88%E5%9F%B7%E7%AD%86%E4%B8%AD%EF%BC%89"><span class="nav-text">memo（執筆中）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%82%B3%E3%82%B9%E3%83%88%E4%BD%8E%E6%B8%9B"><span class="nav-text">コスト低減</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%83%8F%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%AB%E4%BA%BA%E6%9D%90"><span class="nav-text">ハイスキル人材</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88"><span class="nav-text">ナレッジマネジメント</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%88%E6%96%87%E6%9B%B8%E5%8C%96%E3%80%81%E8%B3%87%E6%96%99%E3%81%AE%E6%AE%8B%E3%81%97%E6%96%B9%EF%BC%89"><span class="nav-text">ドキュメンテーション（文書化、資料の残し方）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%83%BB%E6%B4%BB%E7%94%A8"><span class="nav-text">ツールの使い分け・活用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%83%BBTips"><span class="nav-text">ショートカット・Tips</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -174,41 +181,7 @@
       
       
       <div class="post-body">
-          <h1 id="memo（執筆中）"><a href="#memo（執筆中）" class="headerlink" title="memo（執筆中）"></a>memo（執筆中）</h1><h2 id="生産性を高める必要性"><a href="#生産性を高める必要性" class="headerlink" title="生産性を高める必要性"></a>生産性を高める必要性</h2><ul>
-<li>SES を中心とした業態であれ、受託開発であれ、ITエンジニアにとって「時間＝コスト」</li>
-<li>お客様から見て ITエンジニアの生産性は成果物と金額を左右する重要事項</li>
-<li>IT企業は多数あるが、今後日本においては労働人口が減少していくことが確定しているため競争が激化する。従来のように低単金で人数を増やす戦略では行き詰まることが明らか。</li>
-<li>従来は海外の人材を安く使うという選択肢もあったが、海外でも IT人材の需要が増している。日本での給与水準が諸外国と比べて上がっていない現状から、日本で働く外国人は減っていくと予想されている。</li>
-<li>少ない人数でも高いアウトプットを出せる体制を構築していくことが急務。</li>
-</ul>
-<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><ul>
-<li>生産性＝価値&#x2F;コスト<ul>
-<li>価値を上げる</li>
-<li>コストを下げる</li>
-</ul>
-</li>
-<li>生産性の高め方<ul>
-<li>組織としての仕組み作り</li>
-<li>個人としての工夫</li>
-</ul>
-</li>
-</ul>
-<p>（マトリックス）<br>横軸：価値を上げる、コストを下げる<br>縦軸：組織、個人<br>・・・は、組織も個人も意識することもあるのでいまいち。<br>→価値・コストの２軸で分け、組織か個人は（組織）（個人）で注記。</p>
-<h3 id="価値の向上"><a href="#価値の向上" class="headerlink" title="価値の向上"></a>価値の向上</h3><ul>
-<li><p>「SES」及び「受託開発」業務での「価値」を考える</p>
-<ul>
-<li>SES&#x3D;ハイスキル人材</li>
-<li>受託開発&#x3D;顧客のニーズに応えられるだけでなく、専門家として顧客に提案できること</li>
-</ul>
-</li>
-<li><p>→「価値」は「人材のスキル」以外にはない（独自製品の開発を行っている場合は、その独自製品自体の価値基準も考慮）</p>
-</li>
-<li><p>ハイスキル人材の活用・育成（別）（組織）</p>
-</li>
-<li><p>技術力向上（個人）</p>
-</li>
-</ul>
-<h3 id="コスト低減"><a href="#コスト低減" class="headerlink" title="コスト低減"></a>コスト低減</h3><ul>
+          <h1 id="memo（執筆中）"><a href="#memo（執筆中）" class="headerlink" title="memo（執筆中）"></a>memo（執筆中）</h1><h3 id="コスト低減"><a href="#コスト低減" class="headerlink" title="コスト低減"></a>コスト低減</h3><ul>
 <li>開発手法の工夫<ul>
 <li>良いフレームワーク・慣れたフレームワークを使う</li>
 <li>最適な開発手法を整備する</li>
@@ -291,7 +264,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
